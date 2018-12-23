@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+</head>
+
+<body>
+
+<% if (userName == null) { %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mr-2">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+      <div class="navbar-collapse mr-auto" id="navbarSupportedContent col-md-16">
+          <div class="row col-md-8 float-left">
+              <ul class="navbar-nav mr-auto">
+                  <li class="nav-item col-md-8">
+                      <a class="nav-link text-white" href="items">Items</a>
+                  </li>
+                  <li class="nav-item col-md-8">
+                      <a class="nav-link text-white" href="login">login</a>
+                  </li>
+            </ul> 
+          </div>
+        </div>
+  </nav>
+<% } else { %>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mr-2">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="navbar-collapse mr-auto" id="navbarSupportedContent col-md-16">
+        <div class="container col-md-6">
+          <ul class="navbar-nav">
+            <li class="nav-item col-md-2">
+              <a class="nav-link text-white" href="../items">Items</a>
+            </li>
+          </ul>
+        </div>
+        <div class="container">
+          <ul class="navbar-nav">
+              <li class="nav-item col-md-6">
+                 Welcome <%= userName %>!
+              </li>
+              <li class="nav-item col-md-7">
+                  <a class="nav-link text-white" href="../prevOrders">Order History</a>
+              </li>
+              <li class="nav-item col-md-3">
+                <a class="nav-link text-white" href="../signout">Sign Out</a>
+            </li>
+          </ul> 
+        </div>
+  </nav>
+<% } %>
+
+<h2 class="text-center">Order Placed</h2>
+<h4 class="text-center">Order No: <%= orderNo %></h2>
+</body>
+
+
+</html>
+
